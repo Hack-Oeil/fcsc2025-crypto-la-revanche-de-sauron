@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Les CTFs de Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 检查窗口是否在 iframe 中
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // 启用代码高亮:
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js 未加载！");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>挑战 #558</h3>
+                            <h2 class="section-title">索伦的复仇</h2>
+                            <p>
+在你的初次胜利面前感到蒙羞的索伦加强了他的安全措施。由于无法容忍放弃基于魔戒的加密方案，他与手下约定在每次加密后更换魔戒。他对自己的新创造充满信心，并与最忠诚的仆人交换着至关重要的信息。
+<br /><br />
+精灵们成功截获了一份神秘文书，这次是用一枚至尊魔戒加密的。你能够再次向索伦证明，即使是最强大的黑暗魔君也是可以被击败的吗？
+         <br/><img src="./assets/images/la-revanche-de-sauron.jpg">    
+                                    </p>
+                            <h4>待研究的文件:</h4>
+                            <ul>
+                                <li><a href="../files/output.txt">output.txt</a></li>
+                                <li><a href="../files/la-revanche-de-sauron.py">la-revanche-de-sauron.py</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                官方链接:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-la-revanche-de-sauron/">https://hackropole.fr/fr/challenges/crypto/fcsc2025-crypto-la-revanche-de-sauron/</a>
+                                <br />
+                                作者: graniter / Cryptanalyse
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>学习</h3>
+                            <h2 class="section-title">文档与视频</h2>
+                            <p class="section-subtitle">
+                                暂无文档
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>帮助</h3>
+                            <h2 class="section-title">提示与建议</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discord
+                                    讨论帖</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="回到页面顶部" title="返回顶部"></a>
+    </div>
+</body>
+
+</html>
